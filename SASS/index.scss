@@ -1,0 +1,241 @@
+@import "responsiveness" ;
+
+@mixin tabsAlignment(){
+    .nav-tabs{
+        .nav-item{
+            .nav-link{
+                color: #D5BB73;
+            }
+            .active{
+                color: #1E0235 !important;
+                background-color: #D5BB73;
+            }
+            .unactive{
+                background-color: none;
+                color: #D5BB73;
+            }
+        }
+    }
+}
+
+@mixin bgColorOfWorksDes(){
+    background-color: #381E4B;
+    color: aliceblue;
+    button{
+        color: #1E0235;
+        background-color: #F5C93E;
+        box-shadow: 1px 1px 3px #1E0235;
+    }
+}
+
+@mixin transitionOnWork(){
+    transition: transform 0.7s;
+}
+
+@mixin hoverOnWork(){
+    transform: scale(1.1);
+}
+
+body{
+    background-color: #1E0235;
+    #navbar{
+        #logo{
+            transform: rotate3d(7, -6, 0, 45deg);
+            font-weight: bolder;
+            color: #D5BB73;
+        }
+
+        #hNavTabs{
+            @include tabsAlignment();
+        }
+
+        #bars{
+            color: #D5BB73 ;
+        }        
+    }
+    
+    #vNavTabs{
+        position: absolute;
+        right: 0rem;
+        top: 3rem;
+        @include tabsAlignment() ;
+        div{
+            .navbar-toggler {
+                border-color: white !important;
+                background-color: #D5BB73 !important;
+            }
+                .navbar-collapse {
+                background-color: rgba(245, 245, 245, 0.6509803922);
+                color: black;
+                font-weight: 700;
+                text-align: right;
+                width: 4rem;
+            }
+        }
+    }
+
+    #tabPanes{
+        #home{
+            #content{
+                h1{
+                    color: #D5BB73;
+                }
+                #profile{
+                    color: whitesmoke;
+                }
+
+                #cv{
+                    background-color: #1E0235;
+                    color: #D5BB73;
+                    border: 2px solid #D5BB73;
+                }
+                #cv:hover{
+                    color: #eee6e6;
+                    border-color: #eee6e6;
+                }
+
+                #cv:hover{
+                    cursor: pointer;
+                }
+
+                #socialAccounts{
+                    a{
+                        background-color: #D5BB73;
+                        color: #1E0235;
+                        border-radius: 50%;
+                        text-decoration: none !important;
+                    }
+                    a:hover{
+                        background-color: #eee6e6;
+                    }
+                }
+                
+            }
+
+            #pic{
+                background: linear-gradient(-10deg, #3C0E57, #1E0235, #1E0235, #1E0235, #1E0235, #1E0235);
+            }
+        }
+
+        #about{
+            div#aboutPic {
+                transform: scale(1.7);
+                position: relative;
+                top: 10rem;
+                left: -1rem;
+                z-index: 0;
+            }
+            #aboutMeText{
+                box-shadow: 10px 8px 12px black, -2px -6px 7px black;
+                position: relative;
+                left: -2rem;
+                color: whitesmoke;
+                text-align: justify;
+                h1{
+                    color: #D5BB73;
+                }
+            }
+        }
+
+        #works{
+            h1{
+                color: aliceblue;
+            }
+
+            #allWorks{
+                .work{
+                    @include transitionOnWork() ;
+                    .workDes{
+                        @include bgColorOfWorksDes() ;
+                    }
+                }
+
+                .work:hover{
+                    @include hoverOnWork() ;
+                }
+            }
+        }
+
+        #internships{
+            h1{
+                color: aliceblue;
+            }
+
+            div{
+                .internship{
+                    transition: transform 0.5s ease;
+                    background-color: #270B3E;
+                    width: 28rem;
+                    img{
+                        opacity: 0.95;
+                    }
+                    img:hover{
+                        opacity: 1;
+                    }
+                    .internshipDes{
+                        section{
+                            h3{
+                                
+                                i{
+                                    color: #ffffffb8;
+                                }
+                                color: #dac894;
+                                width: 13rem;
+                            }
+                            p{
+                                color: #b9a0ce;
+                            }
+                        }
+                    }
+                }
+                .internship:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        #skills{
+            h1{
+                color: aliceblue;
+            }
+        }
+    }
+
+    footer{
+        background-color: #270B3E;
+        #footerLogo{
+            transform: rotate3d(7, -6, 0, 45deg);
+            font-weight: bolder;
+            color: #D5BB73;
+        }
+        #footerHNavTabs{
+            ul{
+                li{
+                    a{
+                        color: white;
+                    }
+                }
+            }
+
+            ul{
+                li{
+                    a:hover{
+                        color: #D5BB73;
+                    }
+                }
+            }
+        }
+
+        #socialAccounts{
+            a{
+                background-color: white;
+                color: #1E0235;
+                border-radius: 50%;
+                text-decoration: none !important;
+            }
+            a:hover{
+                background-color: #D5BB73;
+            }   
+        }
+    }
+}

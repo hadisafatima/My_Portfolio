@@ -1,0 +1,187 @@
+@mixin background(){
+    background: none !important;
+}
+
+@mixin home(){
+    #home{
+        #content{
+            #profile{
+                font-size: 1rem !important; 
+            }
+        }
+    
+        #pic{
+            @include background() ;
+        }
+    }
+}
+
+@mixin left(){
+    left: -8rem !important;
+    top: 5rem !important;
+}
+
+@mixin aboutMeText($left, $width){
+    box-shadow: none !important;
+    left: $left ;
+    width: $width ;
+    top: -2rem !important;
+}
+
+@media screen and (max-width: 550px) {
+    body{
+        #vNavTabs {
+            top: 1rem !important;
+        }
+        #tabPanes{
+            @include home() ;
+
+            #about{
+                #aboutMeText {
+                    box-shadow: none !important;
+                    left: 0 !important; 
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width : 550px) and (max-width : 576px) {
+    body{
+        #vNavTabs {
+            top: 1rem !important;
+        }
+        #tabPanes{
+            @include home() ;
+            #about{
+                #aboutPic {
+                    transform: scale(4);
+                    top: 88rem;
+                    left: -1.3rem;
+                }
+                #aboutMeText {
+                    box-shadow: none;
+                }
+            } 
+            #tabPanes{
+                #internships{
+                    div{
+                        .internship {
+                            width: 30rem !important;
+                        }
+                    } 
+                } 
+            } 
+        }
+    }
+}
+
+@media screen and (min-width : 576px) and (max-width: 768px) {
+    body{
+        #tabPanes{
+            #home{
+                #pic{
+                    @include background() ;
+                }
+            }
+            #about{
+                #aboutMeText {
+                    box-shadow: none !important;
+                    left: 0 !important;
+                }
+            } 
+            #internships{
+                div{
+                    .internship {
+                       width: 18rem !important;
+                        .internshipDes{
+                           section{
+                               h3 {
+                                width: 8rem !important;
+                                font-size: 1rem !important;
+                               }
+                           }
+                       }
+                   }
+                }
+            } 
+        }
+    }
+}
+
+@media screen and (min-width : 768px) and (max-width : 991px) {
+    body{
+        #tabPanes{
+            #about{
+                #aboutPic {
+                    top: 19rem !important;
+                    left: -3rem !important;
+                }
+                #aboutMeText{
+                    left: -4rem !important;
+                }
+            }
+            #internships{
+                div{
+                    .internship{
+                        width: 22rem !important;
+                        .internshipDes{
+                            section{
+                                h3 {
+                                    width: 10rem !important;
+                                    font-size: 1.2rem !important;
+                                }
+                            } 
+                        } 
+                    } 
+                } 
+            } 
+        }
+    }
+}
+
+@media screen and (min-width : 991px) and (max-width : 1199px) {
+    body{
+        #tabPanes{
+            #about{
+                #aboutPic {
+                    top: 16rem !important;
+                    left: 0.7rem !important;
+                } 
+                #aboutMeText{
+                    left: 0 !important;
+                }
+            }
+            #internships{
+                div{
+                    .internship{
+                        width: 26rem !important;
+                        .internshipDes{
+                            section{
+                                h3 {
+                                   width: 12rem !important;
+                               }
+                            } 
+                        } 
+                    } 
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width : 1199px) and (max-width : 1399px) {
+    body{
+        #tabPanes{
+            #about{
+                #aboutPic {
+                    top: 16rem !important;
+                    left: -0.3rem !important;
+                }
+                #aboutMeText{
+                    left: 0 !important;
+                }
+            }
+        }
+    }
+}
