@@ -24,4 +24,5 @@ JavaScript: For DOM manipulation and enhancing interactivity.
 If you have any questions or want to get in touch, feel free to reach out:
 
 Email: hadisaasyed@gmail.com
-[LinkedIn Profile: ](https://www.linkedin.com/in/hadisa-fatima-syed-85537a266/)
+
+[LinkedIn Profile](https://www.linkedin.com/in/hadisa-fatima-syed-85537a266/)
